@@ -1,0 +1,108 @@
+/* Home.css */
+.home {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff; /* Dark gray */
+  }
+  
+  .movie-grid {
+    scrollbar-width: none;  /* Optional for better scrollbar appearance */
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .movie-card {
+    scrollbar-width: none;  /* Optional for better scrollbar appearance */
+
+    /* background-color: #2d3748;   */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .movie-img {
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .movie-info {
+    padding: 1rem;
+    color: white;
+  }
+  
+  .movie-info h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  
+  .movie-info p {
+    font-size: 1rem;
+    color: #f6ad55; /* Light orange color for the rating */
+  }
+  .nav a.active-link {
+     color: #ffffff;
+    font-weight: bold;
+  }
+  
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 1024px) {
+    .movie-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 movies per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .movie-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 movies per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movie-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 movies per row on smaller screens */
+    }
+  
+    .home h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    background-color: #f6ad55;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1rem;
+}
+ 

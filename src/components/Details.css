@@ -1,0 +1,200 @@
+.details {
+    color: white;
+    /* background-color: #1a202c; */
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Movie Details Layout */
+.movie-details-container {
+    background-color: #0b1323;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    overflow: hidden
+}
+
+/* Left Section - Movie Info */
+.movie-info-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 40%;
+}
+
+/* Poster & Info Side-by-Side */
+.poster-and-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.movie-poster {
+    width: 150px;
+     
+ }
+
+.movie-info122 {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-info122 h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating,
+.runtime,
+.genres,
+.release-date {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+}
+
+.genres {
+    color: #f6ad55;
+}
+
+/* Overview Below Poster & Info */
+.overview {
+    margin-top: 1rem;
+}
+
+.overview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Right Section - Backdrop Image */
+.backdrop-container {
+    width: 50%;
+}
+
+.backdrop-image {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+ }
+ .backdrop-image1{
+    width: 100%;
+    height: 500px;
+    
+    object-fit: cover;
+ }
+
+/* Cast Section */
+.cast-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.cast-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    padding: 1rem;
+    flex-wrap: nowrap;  /* Prevent wrapping */
+    justify-content: flex-start;  /* Align items to the left */
+    scrollbar-width: none;  /* Optional for better scrollbar appearance */
+}
+
+/* Cast Card - Make the images and layout consistent */
+.cast-card {
+    text-align: center;
+    width: 120px;  /* Fixed width for each cast card */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.cast-card img {
+    width: 100%;  /* Image fills the cast card */
+    height: 180px;  /* Set a consistent height */
+    border-radius: 10px;
+    object-fit: cover;  /* Ensures the image covers the area properly */
+}
+
+/* Optional: Scrollbar Styling */
+.cast-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.cast-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.cast-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+.cast-card p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .movie-details-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .poster-and-info {
+        flex-direction: row;
+        align-items: center;
+    }
+    .movie-info122 h1{
+        font-size: 16px;
+        
+    }
+    .overview{
+        text-align: left;
+        width: 90%;
+    }
+
+    .movie-info-container {
+        width: 100%;
+    }
+
+    .backdrop-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-poster {
+        max-width: 180px;
+    }
+    .movie-details-container{
+        background: transparent;
+        border-radius: 0px;
+     }
+
+    .movie-info122 {
+        margin-left: 0;
+     }
+
+    .cast-container {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-poster {
+        max-width: 160px;
+    }
+
+    .cast-container {
+        gap: 0.3rem;
+    }
+}

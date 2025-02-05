@@ -1,0 +1,46 @@
+/* Footer Styling */
+.footer {
+    background-color: #1a202c;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    /* width: 100%; */
+  }
+  
+  .footer-content {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    margin-top: 1rem;
+  }
+  
+  .footer-links a {
+    color: #f6ad55;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #dd8a39;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links a {
+      margin: 0.5rem 0;
+    }
+  }
+  

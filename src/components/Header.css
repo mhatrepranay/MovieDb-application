@@ -1,0 +1,133 @@
+.header {
+  background-color: #1a202c; /* gray-900 */
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #ddd; */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.search-form input {
+  padding: 8px;
+  border: none;
+  outline: none;
+  flex: 1; /* Input takes full width */
+}
+
+.search-form button {
+   border: none;
+ background-color: white;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+ 
+
+/* Navigation (Desktop) */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #e5e7eb; /* gray-400 */
+}
+
+/* Hide menu icon on larger screens */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.navlink.active-link {
+  background-color: #f6ad55;
+  color: #1a202c;
+  font-weight: bold;
+  border-radius: 5px;  /* Optional: Make it look better */
+  padding: 8px 12px;   /* Add some spacing */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon */
+  }
+  .serchbutt{
+    display: none;
+  }
+   
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    background-color: #1a202c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 20;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .search-form {
+    flex-grow: 1;
+    
+    margin-left: 44px;
+    margin-right: 25px;
+  }
+
+  .search-form input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.25rem;
+  }.search-button{
+    display: none;
+  }
+
+  .nav a {
+    font-size: 0.875rem;
+  }
+
+  .search-form input {
+    width: 100px;
+  }
+}
