@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './Home.css';
 import Loader from './Loader';
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+const API_KEY =c45a857c193f6302f2b5061c3b85e743;
 const AllMovies = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
